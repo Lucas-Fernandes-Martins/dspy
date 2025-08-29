@@ -214,6 +214,7 @@ class DspyAdapter(GEPAAdapter[Example, TraceData, Prediction]):
                         captured_trace=trace,
                     )
                     d["Feedback"] = fb["feedback"]
+                    assert fb["score"] == module_score, f"Currently, GEPA only supports feedback functions that return the same score as the module's score. However, the module-level score is {module_score} and the feedback score is {fb.score}."
                     # d['score'] = fb.score
                 items.append(d)
 
