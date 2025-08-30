@@ -282,7 +282,7 @@ class GEPA(Teleprompter):
         track_best_outputs: bool = False,
         # Reproducibility
         seed: int | None = 0,
-        keep_module_scores: bool = False
+        keep_module_scores: bool = False,
     ):
         try:
             inspect.signature(metric).bind(None, None, None, None, None)
