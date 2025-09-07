@@ -215,6 +215,7 @@ class DspyAdapter(GEPAAdapter[Example, TraceData, Prediction]):
                         module_outputs=prediction,
                         captured_trace=trace,
                     )
+                    #adding score choice logic
                     d["Feedback"] = fb["feedback"]
                     if self.keep_module_scores:
                         d["score"] = module_score
